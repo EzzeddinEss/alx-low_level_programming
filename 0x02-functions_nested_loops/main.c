@@ -7,7 +7,7 @@
  * Return : 0
 */
 
-int void main(void)
+int main(void)
 {
 	print_alphabet();
 	return (0);
