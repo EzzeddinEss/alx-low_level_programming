@@ -7,7 +7,7 @@
  * -1 if less than Zero
  *
  * @n: is the checking parameter
-*/
+ */
 
 int print_sign(int n)
 {
