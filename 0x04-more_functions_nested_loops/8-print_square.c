@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_diagonal - function that draws a diagonal line on the terminal..
+ * print_square -  function that prints a square.
  * @n: the checking parameter
  * Return: print slash
  */
 
-void print_diagonal(int n)
+void print_square(int n)
 {
 	if (n <= 0)
 	{
@@ -22,9 +22,9 @@ void print_diagonal(int n)
 		{
 			for (j = 1; j <= i; j++)
 			{
-				_putchar(' ');
+				_putchar('#');
 			}
-			_putchar('\\');
+			_putchar('#');
 		}
 	}
 	_putchar('\n');
