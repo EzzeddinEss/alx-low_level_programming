@@ -18,8 +18,8 @@ void puts2(char *n)
 		}
 		if (x % 2 == 0)
 		{
-			_putchar(n[x]);
+			_putchar(n[x];
 		}
-		x++;
+     x+
 	}
 }
