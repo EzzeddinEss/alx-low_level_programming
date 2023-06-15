@@ -1,0 +1,14 @@
+#include<stdio.h>
+
+/**
+ * main - Print a text using puts function only
+ *
+ * Return: Alwayes 0
+ */
+
+int main(void)
+{
+  char strg[100] = "with proper grammar, but the outcome is a piece of art,";
+  puts(strg);
+  return (0);
+}
