@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m "This report, by its very length, defends itself against the risk of being read "
+git commit -m "This report, by its very length, defends itself against the risk of being read"
 git push
