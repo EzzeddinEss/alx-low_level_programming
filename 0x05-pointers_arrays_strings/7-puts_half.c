@@ -18,10 +18,7 @@ split++;
 length = split / 2;
 if (split % 2 == 1)
 length = ((split + 1) / 2);
-while (split > length)
-{
-_putchar(str[length]);
-length++;
-}
+for (split = length; str[split] != '\0'; split++)
+_putchar(str[split]);
 _putchar('\n');
 }
