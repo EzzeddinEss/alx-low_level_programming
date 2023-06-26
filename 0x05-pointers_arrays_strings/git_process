@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m "Half the lies they tell about me aren't true"
+git commit -m "Winning is only half of it. Having fun is the other half "
 git push
