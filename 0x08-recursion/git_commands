@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m "You mustn't be afraid to dream a little bigger, darling"
+git commit -m "Once an idea has taken hold of the brain it's almost impossible to eradicate "
 git push
