@@ -27,8 +27,8 @@ while (x >= 0)
 {
 free(tdarr[x]);
 free(tdarr);
-x--;
 return (NULL);
+x--;
 }
 }
 for (y = 0; y < width; y++)
