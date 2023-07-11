@@ -15,9 +15,9 @@ char *str;
 unsigned int x = 0;
 str = malloc(sizeof(char) * size);
 if (size == 0)
-return (NULL);
-if (str == NULL)
-return (NULL);
+return (0);
+if (str == 0)
+return (0);
 while (x < size)
 {
 str[x] = c;
