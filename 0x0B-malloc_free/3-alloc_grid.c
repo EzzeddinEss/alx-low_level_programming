@@ -21,14 +21,15 @@ return (NULL);
 for (x = 0; x < height; x++)
 {
 tdarr[x] = malloc(sizeof(**tdarr) * width);
-if (tdarr[x] == 0)
+if (tdarr[x] == NULL)
 {
-for(; x >= 0; x--)
+while (x >= 0)
 {
 free(tdarr[x]);
+x--;
+}
 free(tdarr);
 return (NULL);
-}
 }
 for (y = 0; y < width; y++)
 tdarr[x][y] = 0;
