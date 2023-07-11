@@ -24,10 +24,12 @@ tdarr[x] = malloc(sizeof(**tdarr) * width);
 if (tdarr[x] == 0)
 {
 while (x >= 0)
+{
 free(tdarr[x]);
 free(tdarr);
 x--;
 return (NULL);
+}
 }
 for (y = 0; y < width; y++)
 tdarr[x][y] = 0;
