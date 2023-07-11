@@ -23,12 +23,11 @@ for (x = 0; x < height; x++)
 tdarr[x] = malloc(sizeof(**tdarr) * width);
 if (tdarr[x] == 0)
 {
-while (x >= 0)
+for(; x >= 0; x--)
 {
 free(tdarr[x]);
 free(tdarr);
 return (NULL);
-x--;
 }
 }
 for (y = 0; y < width; y++)
