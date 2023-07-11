@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m "The woman who has no imagination has no wings "
+git commit -m "It's not bragging if you can back it up"
 git push
