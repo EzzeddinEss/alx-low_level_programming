@@ -31,16 +31,14 @@ if (ptr == NULL)
 {
 return (NULL);
 }
-while (i < c1)
+for (; s1[i] != '\0'; i++)
 {
 ptr[i] = s1[i];
-i++;
 }
-while (j < n)
+for (; j < n; j++)
 {
 ptr[i] = s2[j];
 i++;
-j++;
 }
 ptr[i] = '\0';
 return (ptr);
