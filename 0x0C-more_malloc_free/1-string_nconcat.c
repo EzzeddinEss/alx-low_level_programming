@@ -39,8 +39,8 @@ i++;
 while (j < n)
 {
 ptr[i] = s2[j];
-j++;
 i++;
+j++;
 }
 ptr[i] = '\0';
 return (ptr);
