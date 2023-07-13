@@ -21,17 +21,17 @@ while (s2[c2] != '\0')
 c2++;
 if (n < c2)
 {
-ptr = malloc(sizeof(char) * (c1 + n + 1));
+ptr = malloc(sizeof(ptr) * (c1 + n + 1));
 }
 else
 {
-ptr = malloc(sizeof(char) * (c1 + c2 + 1));
+ptr = malloc(sizeof(ptr) * (c1 + c2 + 1));
 }
 if (ptr == NULL)
 {
 return (NULL);
 }
-while (s1[i] != '\0')
+while (i < c1)
 {
 ptr[i] = s1[i];
 i++;
