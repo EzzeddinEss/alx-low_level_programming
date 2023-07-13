@@ -19,7 +19,7 @@ if (min > max)
 return (NULL);
 }
 arr = max - min + 1;
-ptr = malloc(sizeof(ptr) * arr);
+ptr = malloc(sizeof(int) * arr);
 if (ptr == NULL)
 {
 return (NULL);
