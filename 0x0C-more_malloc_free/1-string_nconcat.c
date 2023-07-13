@@ -28,7 +28,9 @@ else
 ptr = malloc(sizeof(ptr) * (c1 + c2 + 1));
 }
 if (ptr == NULL)
+{
 return (NULL);
+}
 while (s1[i] != '\0')
 {
 ptr[i] = s1[i];
