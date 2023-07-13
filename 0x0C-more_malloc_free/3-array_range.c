@@ -22,7 +22,9 @@ return (NULL);
 arr = max - min + 1;
 ptr = malloc(sizeof(ptr) * arr);
 if (ptr == NULL)
+{
 return (NULL);
+}
 while (min <= max)
 {
 ptr[i] = min++;
