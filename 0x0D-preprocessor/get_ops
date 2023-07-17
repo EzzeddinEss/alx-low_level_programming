@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m " program that prints the name of the file it was compiled from"
+git commit -m "Function-like macro"
 git push
