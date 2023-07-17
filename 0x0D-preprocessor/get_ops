@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m "a header file that defines a macro named PI"
+git commit -m " program that prints the name of the file it was compiled from"
 git push
