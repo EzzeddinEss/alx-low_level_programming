@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m "Function-like macro"
+git commit -m "function-like macro SUM(x, y) that computes the sum of the numbers x and y"
 git push
