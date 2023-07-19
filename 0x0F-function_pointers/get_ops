@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m "What's my name"
+git commit -m " If you spend too much time thinking about a thing, you'll never get it done"
 git push
