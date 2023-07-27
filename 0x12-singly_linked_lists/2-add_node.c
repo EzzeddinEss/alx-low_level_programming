@@ -18,7 +18,7 @@ int count;
 for (count = 0; str[count];)
 count++;
 newNode = malloc(sizeof(list_t));
-if(newNode == NULL)
+if (newNode == NULL)
 return (NULL);
 if (str != NULL)
 {
