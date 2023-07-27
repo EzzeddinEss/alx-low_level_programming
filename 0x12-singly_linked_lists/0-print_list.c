@@ -11,9 +11,9 @@
 size_t print_list(const list_t *h)
 {
 int stl;
-for (stl = 0; h != NULL; stl++)
+for (stl = 0; h != 0; stl++)
 {
-if (h->str == NULL)
+if (h->str == 0)
 {
 printf("[%d] %s \n", 0, "(nil)");
 }
