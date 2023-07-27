@@ -12,32 +12,35 @@
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-int count = 0;
-list_t *newNode, *tempo;
-
-for (;str[count];count++);
+list_t *newNode;
+list_t *temp = *head;
+int count;
+for (count = 0; str[count];)
+count++;
 newNode = malloc(sizeof(list_t));
 if (newNode == NULL)
 return (NULL);
+if (str != NULL)
+{
 newNode->str = strdup(str);
-newNode->len = count;
-newNode->next = NULL;
-if (str== NULL)
+if (newNode->str == NULL)
 {
 free(newNode);
 return (NULL);
 }
-if (*head == NULL)
+newNode->len = count;
+}
+if (temp != NULL)
 {
-*head = newNode;
-return (newNode);
+while (temp->next)
+{
+temp = temp->next;
+}
+temp->next = newNode;
 }
 else
-{
-tempo = *head;
-while (tempo->next != NULL)
-tempo = tempo->next;
-tempo->next = newNode;
+*head = newNode;
+
 return (newNode);
-}
+
 }
