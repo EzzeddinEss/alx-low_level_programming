@@ -22,7 +22,7 @@ if (str != NULL)
 {
 newNode->str = strdup(str);
 newNode->len = count;
-if (newNode == NULL)
+if (newNode->str == NULL)
 return(NULL);
 }
 
