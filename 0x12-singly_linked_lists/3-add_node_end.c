@@ -13,17 +13,16 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 int count = 0;
-list_t *newNode, *temp;
+list_t *newNode, *tempo;
 
-while (str[count])
-count++;
+for (;str[count];count++);
 newNode = malloc(sizeof(list_t));
 if (newNode == NULL)
 return (NULL);
 newNode->str = strdup(str);
 newNode->len = count;
 newNode->next = NULL;
-if (strdup(str) == NULL)
+if (str== NULL)
 {
 free(newNode);
 return (NULL);
@@ -35,10 +34,10 @@ return (newNode);
 }
 else
 {
-temp = *head;
-while (temp->next != NULL)
-temp = temp->next;
-temp->next = newNode;
+tempo = *head;
+while (tempo->next != NULL)
+tempo = tempo->next;
+tempo->next = newNode;
 return (newNode);
 }
 }
