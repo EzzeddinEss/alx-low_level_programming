@@ -18,14 +18,11 @@ int count;
 for (count = 0; str[count];)
 count++;
 newNode = malloc(sizeof(list_t));
-if (str != NULL)
+if (str != NULL || newNode != NULL)
 {
 newNode->str = strdup(str);
 newNode->len = count;
 }
-else if (newNode == NULL)
-return (0);
-
 
 newNode->next = *head;
 *head = newNode;
