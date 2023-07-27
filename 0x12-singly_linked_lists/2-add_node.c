@@ -18,7 +18,7 @@ int count;
 for (count = 0; str[count];)
 count++;
 newNode = malloc(sizeof(list_t));
-if (str != NULL || newNode == NULL)
+if (head != NULL || newNode == NULL)
 {
 newNode->str = strdup(str);
 newNode->len = count;
