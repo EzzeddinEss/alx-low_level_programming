@@ -20,7 +20,7 @@ fd = open(filename, O_RDONLY);
 if (fd == -1)
 return (0);
 buffer = malloc(sizeof(char) * letters);
-if (filename == 0 || letters == 0)
+if (!filename || !letters)
 return (0);
 memo = read(fd, buffer, letters);
 lett = write(STDOUT_FILENO, buffer, memo);
