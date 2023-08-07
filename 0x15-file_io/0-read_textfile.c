@@ -16,13 +16,12 @@ ssize_t fd;
 ssize_t w;
 ssize_t r;
 char buffer[BUF_SIZE * 8];
-
 fd = open(filename, O_RDONLY);
 if (fd == -1)
 return (0);
 if (filename == NULL || !letters)
 return (0);
-r = read(fd,& buffer[0], letters);
+r = read(fd, &buffer[0], letters);
 w = write(STDOUT_FILENO, &buffer[0], r);
 close(fd);
 return (w);
