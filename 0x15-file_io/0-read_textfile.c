@@ -20,15 +20,11 @@ fd = open(filename, O_RDONLY);
 if (fd == -1)
 return (0);
 buffer = malloc(sizeof(char) * letters);
-if (filename == 0 || letters == 0 || buffer == 0)
+if (filename == NULL || !letters || !buffer)
 return (0);
 r = read(fd, buffer, letters);
 w = write(STDOUT_FILENO, buffer, r);
-if (r == -1 || w == -1)
-{
 free(buffer);
 close(fd);
-return (r);
-}
 return (w);
 }
