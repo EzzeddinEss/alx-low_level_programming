@@ -18,10 +18,5 @@ char buffer[BUF_SIZE * 8];
 fd = open(filename, O_RDONLY);
 if (fd == -1)
 return (0);
-if (filename == NULL || !letters)
-return (0);
-lett = read(fd, &buffer[0], letters);
-lett = write(STDOUT_FILENO, &buffer[0], lett);
-close(fd);
-return (lett);
+
 }
