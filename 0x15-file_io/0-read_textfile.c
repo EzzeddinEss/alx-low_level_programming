@@ -13,18 +13,22 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 ssize_t fd;
-ssize_t lett;
-ssize_t memo;
+ssize_t w;
+ssize_t r;
 char *buffer;
 fd = open(filename, O_RDONLY);
 if (fd == -1)
 return (0);
 buffer = malloc(sizeof(char) * letters);
-if (!filename || !letters)
+if (filename == 0 || letters == 0 || buffer == 0)
 return (0);
-memo = read(fd, buffer, letters);
-lett = write(STDOUT_FILENO, buffer, memo);
+r = read(fd, buffer, letters);
+w = write(STDOUT_FILENO, buffer, r);
+if (r == -1 || w == -1)
+{
 free(buffer);
 close(fd);
-return (lett);
+return (r);
+}
+return (w);
 }
