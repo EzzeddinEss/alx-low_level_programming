@@ -13,16 +13,15 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 ssize_t fd;
-ssize_t w;
-ssize_t r;
+ssize_t lett;
 char buffer[BUF_SIZE * 8];
 fd = open(filename, O_RDONLY);
 if (fd == -1)
 return (0);
 if (filename == NULL || !letters)
 return (0);
-r = read(fd, &buffer[0], letters);
-w = write(STDOUT_FILENO, &buffer[0], r);
+lett = read(fd, &buffer[0], letters);
+lett = write(STDOUT_FILENO, &buffer[0], lett);
 close(fd);
-return (w);
+return (lett);
 }
