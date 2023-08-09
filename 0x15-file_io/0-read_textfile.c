@@ -19,7 +19,7 @@ char buff[BUF_SIZE * 8];
 fd = open(filename, O_RDONLY);
 if (fd == -1)
 return (0);
-if (filename == NULL || !letters)
+if (filename == 0 || letters == 0)
 return (0);
 _read = read(fd, &buff[0], letters);
 _write = write(STDOUT_FILENO, &buff[0], _read);
