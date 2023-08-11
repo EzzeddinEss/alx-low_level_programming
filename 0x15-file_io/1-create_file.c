@@ -33,6 +33,8 @@ _write = write(fd, text_content, len);
 }
 if (fd == -1)
 return (-1);
+if (_write == -1)
+return (-1);
 close(fd);
 return (1);
 }
