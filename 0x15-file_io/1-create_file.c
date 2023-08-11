@@ -27,13 +27,13 @@ int fd;
 ssize_t _write = 0, len = _strlen(text_content);
 if (filename == NULL)
 return (-1);
-fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
 if (fd == -1)
 return (-1);
 if (len != '\0')
 _write = write(fd, text_content, len);
 close(fd);
-if (_write == len)
+if (_write == 1)
 return (1);
 else
 return (-1);
