@@ -36,6 +36,8 @@ if (fd == -1)
 return (-1);
 if (_write == -1)
 return (-1);
+else
+return (1);
 close(fd);
 return (_write);
 }
