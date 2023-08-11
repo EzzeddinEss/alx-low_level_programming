@@ -25,7 +25,7 @@ int fd;
 ssize_t _write = 0, len = _strlen(text_content);
 if (filename == NULL)
 return (-1);
-fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
+fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 if (fd == -1)
 return (-1);
 if (text_content != NULL)
