@@ -27,7 +27,7 @@ int fd, _write, len = _strlen(text_content);
 if (filename == NULL)
 return (-1);
 fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
-if (len != '\0')
+if (len)
 {
 _write = write(fd, text_content, len);
 }
