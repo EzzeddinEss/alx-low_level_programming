@@ -33,10 +33,10 @@ if (len != '\0')
 {
 _write = write(fd, text_content, len);
 }
-if (len == -1)
-return (-1);
-else
+if (len)
 return (1);
+else
+return (-1);
 close(fd);
 return (_write);
 }
