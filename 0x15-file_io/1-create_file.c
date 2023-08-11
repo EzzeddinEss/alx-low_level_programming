@@ -32,8 +32,8 @@ if (fd == -1)
 return (-1);
 if (text_content != NULL)
 {
-len = _strlen(text_content);    
-_write = write(fd, text_content, len); 
+len = _strlen(text_content);
+_write = write(fd, text_content, len);
 if (_write == -1)
 {
 close(fd);
