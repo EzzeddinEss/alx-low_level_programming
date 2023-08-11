@@ -32,7 +32,7 @@ if (fd == -1)
 return (-1);
 if (len != '\0')
 {
-_write = write(fd, text_content, len);
+_write = write(fd, text_content, _strlen(text_content));
 }
 close(fd);
 if (_write == len)
