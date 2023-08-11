@@ -23,7 +23,8 @@ return (i);
  */
 int create_file(const char *filename, char *text_content)
 {
-int fd, _write, len = _strlen(text_content);
+int fd;
+ssize_t _write, len = _strlen(text_content);
 if (filename == 0)
 return (-1);
 fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
@@ -36,5 +37,5 @@ return (-1);
 if (_write == -1)
 return (-1);
 close(fd);
-return (1);
+return (_write);
 }
