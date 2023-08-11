@@ -33,7 +33,7 @@ return (-1);
 if (len != '\0')
 _write = write(fd, text_content, len);
 close(fd);
-if (_write == 1)
+if (_write != 1)
 return (1);
 else
 return (-1);
