@@ -17,9 +17,9 @@ ssize_t _read;
 ssize_t _write;
 char buff[BUF_SIZE * 8];
 fd = open(filename, O_RDONLY);
-if (fd == -1)
+if (!filename || !letters)
 return (0);
-if (filename == 0 || letters == 0)
+if (fd == -1)
 return (0);
 _read = read(fd, &buff[0], letters);
 _write = write(STDOUT_FILENO, &buff[0], _read);
