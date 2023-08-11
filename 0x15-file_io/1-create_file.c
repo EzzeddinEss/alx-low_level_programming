@@ -24,14 +24,14 @@ return (i);
 int create_file(const char *filename, char *text_content)
 {
 int fd, _write, len = _strlen(text_content);
-if (filename == NULL)
+if (filename == 0)
 return (-1);
 fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
 if (len != '\0')
 {
 _write = write(fd, text_content, len);
 }
-if (fd < 0 || _write < 0)
+if (fd == -1 || _write == -1)
 return (-1);
 close(fd);
 return (1);
