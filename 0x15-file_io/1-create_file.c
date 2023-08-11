@@ -29,15 +29,14 @@ fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
 if (fd == -1)
 return (-1);
 if (text_content != NULL)
+{
 _write = write(fd, text_content, len);
 if (_write != len)
 {
 close(fd);
 return (-1);
 }
-else
-{
+}
 close(fd);
 return (1);
-}
 }
