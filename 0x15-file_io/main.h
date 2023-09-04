@@ -9,6 +9,11 @@
 #include <unistd.h>
 
 #define BUF_SIZE 1024
+#define USAGE "Usage: cp file_from file_to\n"
+#define READERR "Error: Can't read from file %s\n"
+#define WRITEERR "Error: Can't write to %s\n"
+#define CLOSEERR "Error: Can't close fd %d\n"
+#define PERMISSIONS (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH)
 
 int _putchar(char c);
 ssize_t read_textfile(const char *filename, size_t letters);

@@ -37,6 +37,11 @@ int append_text_to_file(const char *filename, char *text_content)
 		_wirtten = write(fd, text_content, len);
 	}
 	close(fd);
+	if (chmod(filename, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH) == -1)
+	{
+		return (-1);
+	}
+
 	return (_wirtten == len ? 1 : -1);
 }
 
