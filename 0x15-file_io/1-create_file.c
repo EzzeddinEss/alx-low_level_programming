@@ -26,13 +26,13 @@ int create_file(const char *filename, char *text_content)
 	ssize_t _written = 0, len = _strlen(text_content);
 	mode_t permissions = S_IRUSR | S_IWUSR;
 
-	if (filename == NULL)
+	if (!filename)
 	return (-1);
 
 	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, permissions);
 	if (fd == -1)
 		return (-1);
-	if (text_content != NULL && len != 0)
+	if (text_content != NULL && len)
 	{
 		_written = write(fd, text_content, len);
 		if (_written == -1)
@@ -42,7 +42,7 @@ int create_file(const char *filename, char *text_content)
 		}
 	}
 	close(fd);
-	if (_written != 0)
+	if (_written)
 		chmod(filename, permissions);
 	return (1);
 }
