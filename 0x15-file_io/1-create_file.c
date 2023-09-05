@@ -32,7 +32,7 @@ int create_file(const char *filename, char *text_content)
 	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, permissions & S_IXUSR);
 	if (fd == -1)
 		return (-1);
-	if (text_content != NULL)
+	if (text_content != NULL && len)
 	{
 		_written = write(fd, text_content, len);
 		if (_written == -1)
