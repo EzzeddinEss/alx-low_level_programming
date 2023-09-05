@@ -24,15 +24,15 @@ int create_file(const char *filename, char *text_content)
 {
 	int fd;
 	ssize_t _written = 0, len = _strlen(text_content);
-	mode_t permissions = S_IRUSR | S_IWUSR;
+	mode_t permissions = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
 	if (filename == NULL)
 	return (-1);
 
-	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, permissions);
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, permissions & S_IXUSR);
 	if (fd == -1)
 		return (-1);
-	if (text_content != NULL && len)
+	if (text_content != NULL)
 	{
 		_written = write(fd, text_content, len);
 		if (_written == -1)
@@ -42,10 +42,6 @@ int create_file(const char *filename, char *text_content)
 		}
 	}
 	close(fd);
-	if (chmod(filename, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH) == -1)
-	{
-		return (-1);
-	}
 
 	return (1);
 }
