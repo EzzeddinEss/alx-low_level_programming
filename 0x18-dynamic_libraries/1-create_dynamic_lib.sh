@@ -1,4 +1,5 @@
 #!/bin/bash
-gcc -fPIC -c *.c
-gcc -shared -o *.o liball.so 
+gcc -Wall -Werror -Wextra -pedantic -c -fPIC *.c
+gcc -shared -o liball.so *.o
+export LD_LIBRARY_PATH=:/root/alx-low_level_programming/0x18-dynamic_libraries
 
