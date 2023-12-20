@@ -22,7 +22,7 @@ RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 # the Makefile rule.
-all: $(OBJ)
+all: m.h $(OBJ)
 	$(CC) $(SRC) -o $(NAME)
 
 # deletes all Emacs and Vim temporary files along with the executable
