@@ -1,0 +1,17 @@
+#this a Makefile to compile source file: school
+
+# the compiler to be used.
+CC = gcc
+
+# All the .c files.
+SRC = main.c school.c
+
+# Output files
+OBJ = $(SRC:.c=.o) 
+
+# the name of the executable
+NAME = school
+
+# the Makefile rule.
+all: $(OBJ)
+	$(CC) $(SRC) -o $(NAME)
