@@ -1,40 +1,42 @@
-#this a Makefile to compile source file: school
+# Makefile to compile source file: school
 
-# the compiler to be used.
+# The compiler to be used.
 CC = gcc
 
 # All the .c files.
 SRC = main.c school.c
 
 # Output files
-OBJ = $(SRC:.c=.o) 
+OBJ = $(SRC:.c=.o)
 
-# the name of the executable
+# The name of the executable
 NAME = school
 
-# make the program to delete files
+# Make the program delete files
 RM = rm -f
 
-# make sure rules should never fail
+# Make sure rules should never fail
 .PHONY: all clean oclean fclean re
 
-# my favorite compiler flags:
+# My favorite compiler flags:
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-# the Makefile rule.
-all: m.h $(OBJ)
-	$(CC) $(SRC) -o $(NAME)
+# The Makefile rule.
+all: $(NAME)
 
-# deletes all Emacs and Vim temporary files along with the executable
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# Deletes all temporary files and the executable
 clean:
 	$(RM) *~ $(NAME)
 
-# deletes the object files
+# Deletes the object files
 oclean:
 	$(RM) $(OBJ)
 
-# deletes all Emacs and Vim temp files, exe's, and the object files
+# Deletes all temporary files, executables, and object files
 fclean: oclean clean
 
-# forces recompilation of all source files
+# Forces recompilation of all source files
 re: fclean all
