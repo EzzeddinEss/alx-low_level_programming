@@ -1,42 +1,24 @@
 # Makefile to compile source file: school
 
-# The compiler to be used.
 CC = gcc
-
-# All the .c files.
 SRC = main.c school.c
-
-# Output files
 OBJ = $(SRC:.c=.o)
-
-# The name of the executable
 NAME = school
-
-# Make the program delete files
-RM = rm -f
-
-# Make sure rules should never fail
-.PHONY: all clean oclean fclean re
-
-# My favorite compiler flags:
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-# The Makefile rule.
+.PHONY: all clean oclean fclean re
+
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-# Deletes all temporary files and the executable
 clean:
 	$(RM) *~ $(NAME)
 
-# Deletes the object files
 oclean:
 	$(RM) $(OBJ)
 
-# Deletes all temporary files, executables, and object files
 fclean: oclean clean
 
-# Forces recompilation of all source files
-re: fclean all
+re: oclean all
