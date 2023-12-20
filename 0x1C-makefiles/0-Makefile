@@ -1,0 +1,8 @@
+#this a Makefile to compile source file: school
+
+# Default rule
+all: school
+
+# Makefile rule
+school: main.c school.c
+	gcc main.c school.c -o school
