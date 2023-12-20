@@ -15,6 +15,9 @@ NAME = school
 # make the program to delete files
 RM = rm -f
 
+# make sure rules should never fail
+.PHONY: all clean oclean fclean re
+
 # my favorite compiler flags:
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
@@ -35,6 +38,3 @@ fclean: oclean clean
 
 # forces recompilation of all source files
 re: fclean all
-
-# make sure rules should never fail
-.PHONY: all clean oclean fclean re
